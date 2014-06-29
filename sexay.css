@@ -81,11 +81,11 @@ h1 {
         transition: background-color .25s ease-in-out;
         -moz-transition: background-color .25s ease-in-out;
         -webkit-transition: background-color .25s ease-in-out;
-        border-bottom: solid 2px #F74F48;
+        border-bottom: solid 2px #8D0938;
     }
 
 .red:hover {
-    background-color: #F74F48;
+    background-color: #8D0938;
     box-shadow: 0px 0px 5px #fff;
     transition: box-shadow .25s ease-in-out;
     -moz-transition: box-shadow .25s ease-in-out;
