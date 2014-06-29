@@ -11,10 +11,6 @@
 					mouseport: jQuery("#port")
 				});
 			});
-            function clock_refresh() {
-            	var d = new Date();
-           		document.getElementById("clock").innerHTML = d.getHours().toString() + ":" + d.getMinutes().toString() + ":" + d.getSeconds().toString();
-            }
             function clock_hour() {
             	var d = new Date();
            		document.getElementById("hour").innerHTML = d.getHours().toString() + "h";
@@ -22,10 +18,16 @@
             function clock_min() {
             	var d = new Date();
            		document.getElementById("minute").innerHTML = d.getMinutes().toString() + "m";
+           		if ( d.getMinutes() == 0) {
+           			clock_hour();
+           		}
             }
             function clock_sec() {
             	var d = new Date();
            		document.getElementById("second").innerHTML = d.getSeconds().toString() + "s";
+           		if ( d.getSeconds() == 0) {
+           			clock_min();
+           		}
             }
 		</script>
     </head>
@@ -109,7 +111,6 @@
             	<p id="hour">
 		            <script type="text/javascript">
 		                clock_hour();
-		                setInterval("clock_hour()", 60000);
 		            </script>
 	            </p>
             </div>
@@ -117,7 +118,6 @@
             	<p id="minute">
 		            <script type="text/javascript">
 		                clock_min();
-		                setInterval("clock_min()", 30000);
 		            </script>
 	            </p>
             </div>
