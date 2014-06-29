@@ -11,15 +11,31 @@
 					mouseport: jQuery("#port")
 				});
 			});
+            function clock_refresh() {
+            	var d = new Date();
+           		document.getElementById("clock").innerHTML = d.getHours().toString() + ":" + d.getMinutes().toString() + ":" + d.getSeconds().toString();
+            }
+            function clock_hour() {
+            	var d = new Date();
+           		document.getElementById("hour").innerHTML = d.getHours().toString() + "h";
+            }
+            function clock_min() {
+            	var d = new Date();
+           		document.getElementById("minute").innerHTML = d.getMinutes().toString() + "m";
+            }
+            function clock_sec() {
+            	var d = new Date();
+           		document.getElementById("second").innerHTML = d.getSeconds().toString() + "s";
+            }
 		</script>
     </head>
     <body>
     	<div id="google">
-    	    <form method="get" action="http://www.google.com/search">
+    	    <form method="get" action="http://duckduckgo.com">
                 <table border="0" align="center" cellpadding="0">
                     <tr>
                         <td>
-                            <input type="text" class="googlebox" name="q" placeholder="" onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='#1f1f1f';" onfocusout="this.style.color='#666666';" onblur="if(this.value=='')this.value=this.defaultValue; "/>
+                            <input type="text" class="googlebox" name="q" placeholder="DDG" onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='#1f1f1f';" onfocusout="this.style.color='#666666';" onblur="if(this.value=='')this.value=this.defaultValue; "/>
                         </td>
                    </tr>
                 </table>
@@ -87,5 +103,32 @@
                 </div>
             </a>
         </div>
+        <div id="block">
+        	<h1>Current time </h1>
+            <div class="button blue">
+            	<p id="hour">
+		            <script type="text/javascript">
+		                clock_hour();
+		                setInterval("clock_hour()", 60000);
+		            </script>
+	            </p>
+            </div>
+            <div class="button red">
+            	<p id="minute">
+		            <script type="text/javascript">
+		                clock_min();
+		                setInterval("clock_min()", 30000);
+		            </script>
+	            </p>
+            </div>
+            <div class="button blue">
+            	<p id="second">
+		            <script type="text/javascript">
+		                clock_sec();
+		                setInterval("clock_sec()", 1000);
+		            </script>
+	            </p>
+            </div>
+	    </div>
     </body>
 </html>
