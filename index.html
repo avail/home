@@ -11,24 +11,6 @@
 					mouseport: jQuery("#port")
 				});
 			});
-            function clock_hour() {
-            	var d = new Date();
-           		document.getElementById("hour").innerHTML = d.getHours().toString() + "h";
-            }
-            function clock_min() {
-            	var d = new Date();
-           		document.getElementById("minute").innerHTML = d.getMinutes().toString() + "m";
-           		if ( d.getMinutes() == 0) {
-           			clock_hour();
-           		}
-            }
-            function clock_sec() {
-            	var d = new Date();
-           		document.getElementById("second").innerHTML = d.getSeconds().toString() + "s";
-           		if ( d.getSeconds() == 0) {
-           			clock_min();
-           		}
-            }
 		</script>
     </head>
     <body>
@@ -105,30 +87,5 @@
                 </div>
             </a>
         </div>
-        <div id="block">
-        	<h1>Current time </h1>
-            <div class="button blue">
-            	<p id="hour">
-		            <script type="text/javascript">
-		                clock_hour();
-		            </script>
-	            </p>
-            </div>
-            <div class="button red">
-            	<p id="minute">
-		            <script type="text/javascript">
-		                clock_min();
-		            </script>
-	            </p>
-            </div>
-            <div class="button blue">
-            	<p id="second">
-		            <script type="text/javascript">
-		                clock_sec();
-		                setInterval("clock_sec()", 1000);
-		            </script>
-	            </p>
-            </div>
-	    </div>
     </body>
 </html>
