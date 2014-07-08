@@ -112,3 +112,50 @@ h1 {
 }
 .parallax-layer
       { position:absolute; }
+
+#top {
+    width: 360px;
+    margin: 0 auto;
+}
+#top ul {
+    width: 303px;
+}
+
+#top li {
+    display: inline;
+    list-style-type: none;
+    padding-top: 6px;
+    display: inline-block;
+    width: 150px;
+    height: 25px;
+    margin-top: 5px;
+    font-size: 16px;
+    font-family: 'Open Sans';
+    text-align: center;
+}
+
+#top li a {
+    color: #666;
+}
+
+#links {
+    color: #666;
+}
+
+#links ul {
+    display: inline;
+    width: 150px;
+    float: left;
+}
+
+#links ul li {
+    list-style-type: none;
+}
+
+#links a { 
+    color: #666;
+}
+#links a:hover {
+    color: #333;
+    text-decoration: underline;
+}

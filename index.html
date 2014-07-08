@@ -11,6 +11,18 @@
 					mouseport: jQuery("#port")
 				});
 			});
+			$(document).ready(function() {
+			  $('#block').load('tabs/main.html');
+			  $('#top a').click(function( event ) {
+			    event.preventDefault();
+			    var url = $(this).attr('href');
+			    $('#block').fadeOut('fast', function() {
+			      $(this).load(url, {limit: 25}, function() {
+			        $(this).fadeIn('fast');
+			      });
+			    });
+			  });
+			});
 		</script>
     </head>
     <body>
@@ -28,64 +40,17 @@
 		<div id="port">
 			<img class="parallax-layer" src="img/dat.png" alt="" style="width:1522px; height: 432px;"/>
 		</div>
+		<div id="top">
+			<ul>
+				<li class="red">
+					<a href="tabs/main.html">Main</a>
+				</li>
+				<li class="blue">
+					<a href="tabs/links.html">Links</a>
+				</li>
+			</ul>
+		</div>
         <div id="block">
-            <!-- 4chan -->
-            <a href="http://4chan.org/a/">
-                <div class="button red" title="/a/">
-                    <p>/a/</p>
-                </div>
-            </a>
-
-            <a href="http://4chan.org/g/">
-                <div class="button blue" title="/g/">
-                    <p>/g/</p>
-                </div>
-            </a>
-
-            <a href="http://4chan.org/w/">
-                <div class="button red" title="/w/">
-                    <p>/w/</p>
-                </div>
-            </a>
-
-            <a href="http://4chan.org/w/">
-                <div class="button blue" title="/w/">
-                    <p>/x/</p>
-                </div>
-            </a>
-
-            <a href="http://doushio.com/moe/">
-                <div class="button red" title="/moe/">
-                    <p>/moe/</p>
-                </div>
-            </a>
-            
-            <!-- Other bullcrap -->
-            <a href="http://iqdb.org/">
-                <div class="button blue">
-                    <p>IQDB</p>
-                </div>
-            </a>
-            <a href="http://youtube.com/feed/subscriptions">
-                <div class="button red" title="YouTube">
-                    <p>YT</p>
-                </div>
-            </a>
-            <a href="http://osu.ppy.sh/u/avail">
-                <div class="button blue" title="osu!profile">
-                    <p>osu!</p>
-                </div>
-            </a>
-            <a href="http://www.ask.fm/">
-                <div class="button red" title="Ask.fm">
-                    <p>Ask</p>
-                </div>
-            </a>
-            <a href="http://mail.pomf.se/">
-                <div class="button blue" title="Pomf Mail">
-                    <p>Mail</p>
-                </div>
-            </a>
         </div>
     </body>
 </html>
