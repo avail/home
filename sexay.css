@@ -24,6 +24,13 @@ h1 {
     font-size: 188%;
 }
 
+h2 {
+    font-family: 'Adios Script Pro';
+    font-weight: 300;
+    font-size: 300%;
+    margin-bottom: -20px;
+}
+
 #block  {
 	/*padding-left: 45px;
 	background-color: #eee;
