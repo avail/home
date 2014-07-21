@@ -88,11 +88,11 @@ h2 {
         transition: background-color .25s ease-in-out;
         -moz-transition: background-color .25s ease-in-out;
         -webkit-transition: background-color .25s ease-in-out;
-        border-bottom: solid 2px #E5203C;
+        border-bottom: solid 2px #2C292A;
     }
 
 .red:hover {
-    background-color: #E5203C;
+    background-color: #2C292A;
     box-shadow: 0px 0px 5px #fff;
     transition: box-shadow .25s ease-in-out;
     -moz-transition: box-shadow .25s ease-in-out;

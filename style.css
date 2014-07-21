@@ -1,0 +1,70 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background-color: #212121;
+	color: #eee;
+	font-family: "Open Sans Light", Arial, Sans;
+}
+
+body {
+	margin-top: 50px;
+}
+
+li {
+	display: inline;
+	list-style-type: none;
+	float: left;
+	padding-left: 13%;
+}
+
+.centre {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.first { 
+	padding-left: 0;
+}
+
+#top {
+	width: 400px;
+}
+
+#bottom {
+	bottom: 0;
+	position: absolute;
+	height: 110px;
+	background-color: #191919;
+	width: 90%;
+	padding-top: 5px;
+	padding-left: 10%;
+}
+
+.img-chan {
+	background-image: url("image/4ch.png");
+	width: 100px;
+	height: 100px;
+}
+.img-sndsc {
+	background-image: url("image/1.png");
+	width: 100px;
+	height: 100px;
+}
+.img-yt {
+	background-image: url("image/7.png");
+	width: 100px;
+	height: 100px;
+}
+.img-iqdb {
+	background-image: url("image/6.png");
+	width: 100px;
+	height: 100px;
+}
+.img-osu {
+	background-image: url("image/5a.png");
+	width: 100px;
+	height: 100px;
+}

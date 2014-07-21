@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Start</title>
+        <meta charset="utf-8"></meta>
+        <link rel="stylesheet" href="sexay.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jparallax.min.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function(){
+				jQuery('.parallax-layer').parallax({
+					mouseport: jQuery("#port")
+				});
+			});
+			$(document).ready(function() {
+			  $('#block').load('tabs/main.html');
+			  $('#top a').click(function( event ) {
+			    event.preventDefault();
+			    var url = $(this).attr('href');
+			    $('#block').fadeOut('fast', function() {
+			      $(this).load(url, {limit: 25}, function() {
+			        $(this).fadeIn('fast');
+			      });
+			    });
+			  });
+			});
+		</script>
+    </head>
+    <body>
+    	<div id="google">
+    	    <form method="get" action="http://duckduckgo.com">
+                <table border="0" align="center" cellpadding="0">
+                    <tr>
+                        <td>
+                            <input type="text" class="googlebox" name="q" placeholder="DDG" onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='#1f1f1f';" onfocusout="this.style.color='#666666';" onblur="if(this.value=='')this.value=this.defaultValue; "/>
+                        </td>
+                   </tr>
+                </table>
+            </form>
+        </div>
+		<div id="port">
+			<img class="parallax-layer" src="img/dat.png" alt="" style="width:1522px; height: 432px;"/>
+		</div>
+		<div id="top">
+			<ul>
+				<li class="red">
+					<a href="tabs/main.html">Main</a>
+				</li>
+				<li class="blue">
+					<a href="tabs/links.html">Links</a>
+				</li>
+			</ul>
+		</div>
+        <div id="block">
+        </div>
+    </body>
+</html>
