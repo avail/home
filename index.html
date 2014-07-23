@@ -3,10 +3,39 @@
 		<title>New Tab</title>
 		<meta charset="utf-8"></meta>
         <link rel="stylesheet" href="style.css">
+        <script src="js/jquery.js"></script>
+        <script type="text/javascript">
+        document.onkeydown = keydown;
+
+		function keydown(evt) {
+		  if (!evt) evt = event;
+		  if (evt.shiftKey) {
+		    document.getElementById('bar').style = "opacity: 1; width: 340px; margin-left: -173px;";
+		    setTimeout(function() {
+		      document.getElementById('bar').focus();
+		    }, 400);
+		  }
+		}
+
+		var slogans = [
+		  "Spoonm is love, spoonm is life.",
+		  "Please don't squeeze the spoonm.",
+		  "Nothing comes between me and my spoonm.",
+		  "Don't let the spoonm loose.",
+		  "It's a spoonm!"
+		];		
+
+		$(function() { 
+		  var randomSlogan = slogans[Math.floor(Math.random()*slogans.length)];
+		  $("#slogan").text(randomSlogan); 
+		});
+        </script>
 	</head>
 	<body>
 		<div id="top" class="centre">
-			<h1>Spoonm is love, spoonm is life</h1>
+			<!--h1>Spoonm is love, spoonm is life</h1-->
+			<center><div id="slogan"></div></center>
+			<form method="get" action="http://www.google.com/search"> <input id="bar" type="text" name="q" maxlength="255" value="" autocomplete="off" onblur="this.style = 'opacity: 0;';"/></form>
 		</div>
 		<div id="bottom" class="centre">
 			<ul>
