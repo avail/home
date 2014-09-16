@@ -1,92 +1,69 @@
-* {
-	margin: 0;
-	padding: 0;
+#tantrum {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
 }
 
-html {
-	background-color: #212121;
-	color: #eee;
-	font-family: "Open Sans Light", Arial, Sans;
+#content {
+	text-align: center;
 }
 
-body {
-	margin-top: 50px;
+header {
+	font-weight: 600;
+	font-family: Segoe UI;
+	font-size: 200%;
+	color: #fff;
+	background-color: #697079
+}
+
+ul {
+	list-style-type: none;
+	margin-left: -40px;
 }
 
 li {
 	display: inline;
 	list-style-type: none;
-	float: left;
-	padding-left: 13%;
+	padding-top: 6px;
+	display: inline-block;
+	width: 150px;
+	height: 25px;
+	margin-top: 5px;
+	font-size: 16px;
+	font-family: 'Open Sans';
+	text-align: center;
+	background-color: #697079;
+	-moz-transition: 0.2s;
 }
 
-.centre {
-	margin-left: auto;
-	margin-right: auto;
+li:hover {
+	background-color: #596069;
+	-moz-transition: 0.2s;
 }
 
-.first { 
-	padding-left: 0;
+a {
+	color: #fff;
+	text-decoration: none;
 }
 
-#top {
-	font-size: 16pt;
+a:hover {
+	color: #eee;
 }
 
-#bottom {
-	bottom: 0;
-	position: absolute;
-	height: 110px;
-	background-color: #191919;
-	width: 90%;
-	padding-top: 5px;
-	padding-left: 10%;
+#google {
+    z-index: 3000;
+    position: relative;
+    margin: auto;
+    width: 700px;
+    margin-bottom: 15px;
 }
 
-.img-chan {
-	background-image: url("image/4ch.png");
-	width: 100px;
-	height: 100px;
-}
-.img-sndsc {
-	background-image: url("image/1.png");
-	width: 100px;
-	height: 100px;
-}
-.img-yt {
-	background-image: url("image/7.png");
-	width: 100px;
-	height: 100px;
-}
-.img-iqdb {
-	background-image: url("image/6.png");
-	width: 100px;
-	height: 100px;
-}
-.img-osu {
-	background-image: url("image/5a.png");
-	width: 100px;
-	height: 100px;
-}
-
-
-input[type="text"] {
-  border: none;
-  font: 13px Open Sans;
-  color: #000;
-  padding: 2px;
-  width: 30px;
-  position: absolute;
-  opacity: 0;
-  transition: .4s;
-  top: 235px;
-  left: 50%;
-  margin-left: -18px;
-  border: 1px solid #000;
-  box-shadow: 0px 0px 3px -1px #888;
-  text-align: center;
-}
-input[type="text"]:active {
-  margin-left: -173px;
-  width: 340px;
+.googlebox {
+    width: 500px;
+    padding: 15px;
+    font-family: "Tahoma";
+    font-size: 24px;
+    color: #666;
+    background-color: #E2E2E2;
+    border-style: none;
 }

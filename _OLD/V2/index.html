@@ -1,0 +1,83 @@
+<html>
+	<head>
+	<title>New Tab</title>
+		<meta charset="utf-8"></meta>
+		<link rel="stylesheet" href="style.css">
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript">
+		document.onkeydown = keydown;
+
+		function keydown(evt) {
+		  if (!evt) evt = event;
+		  if (evt.shiftKey) {
+		    document.getElementById('bar').style = "opacity: 1; width: 340px; margin-left: -173px;";
+		    setTimeout(function() {
+		      document.getElementById('bar').focus();
+		    }, 400);
+		  }
+		}
+
+		var slogans = [
+		  "Spoonm is love, spoonm is life.",
+		  "Please don't squeeze the spoonm.",
+		  "Nothing comes between me and my spoonm.",
+		  "Don't let the spoonm loose.",
+		  "It's a spoonm!",
+		  "spoonm, there's no better way.",
+		  "Don't play with fire, play with spoonm.",
+		  "I trust spoonm.",
+		  "My spoonm is mine.",
+ 		  "Nobody does it like spoonm.",
+		  "The magic of spoonm.",
+		  "The wonder has a name: spoonm.",
+		  "spoonm, better than sex.",
+		  "Everyone loves spoonm.",
+		  "The secret of spoonm.",
+		  "Swing your spoonm.",
+		  "spoonm, you've got it!",
+		  "Keep going well, keep going spoonm.",
+		  "Where the hell is spoonm?",
+		  "My way is spoonm.",
+		  "spoonm, in touch with tomorrow.",
+		  "The Spoonm Goes Straight to your Head.",
+		  "It's Shake 'n' Spoonm, and I Helped.",
+		  "Things Go Better with Spoonm.",
+		  "Only Spoonm Can Prevent Forest Fires.",
+		  "The Better Way to Start the Spoonm.",
+		  "Things Happen After a Spoonm.",
+		  "The Coolest Spoonm on Ice."
+		];		
+
+		$(function() { 
+		  var randomSlogan = slogans[Math.floor(Math.random()*slogans.length)];
+		  $("#slogan").text(randomSlogan); 
+		});
+		</script>
+	</head>
+	<body>
+		<div id="top" class="centre">
+			<!--h1>Spoonm is love, spoonm is life</h1-->
+			<center><div id="slogan"></div></center>
+			<form method="get" action="http://www.google.com/search"> <input id="bar" type="text" name="q" maxlength="255" value="" autocomplete="off" onblur="this.style = 'opacity: 0;';"/></form>
+		</div>
+		<div id="bottom" class="centre">
+			<ul>
+				<li class="first">
+					<a href="http://4chan.org/w/"><div class="img-chan"></div></a>
+				</li>
+				<li>
+					<a href="http://iqdb.org"><div class="img-iqdb"></div></a>
+				</li>
+				<li>
+					<a href="http://youtube.com/feed/subscriptions"><div class="img-yt"></div></a>
+				</li>
+				<li>
+					<a href="http://soundcloud.com"><div class="img-sndsc"></div></a>
+				</li>
+				<li>
+					<a href="http://osu.ppy.sh/u/avail"><div class="img-osu"></div></a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
